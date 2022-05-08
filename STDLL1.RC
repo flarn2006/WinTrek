@@ -1,0 +1,254 @@
+/**************************************************************************
+ *
+ *  (c) 1992 Joe Jaworski
+ *	 18405 Tamarind Street
+ *  Fountain Valley, CA 92708
+ *	 ALL RIGHTS RESERVED.
+ *
+ * Created and Written by Joe Jaworski
+ * Microsoft C 6.00A, SDK 3.1
+ *
+ *
+ * Revision:	$Revision:   1.4  $
+ * Date:	$Date:   20 Feb 1993 09:27:50  $
+ * Log File:	$Logfile:   C:/src/st/vcs/stdll1.rcv  $
+ * Log:		$Log:   C:/src/st/vcs/stdll1.rcv  $
+ * 
+ *    Rev 1.4   20 Feb 1993 09:27:50   jaworski
+ * Initial Revision
+ *
+ **************************************************************************/
+			      
+/**********************************/
+/*           WINTREK1 DLL         */
+/*	 resource script file	  */
+/**********************************/
+
+#ifndef WORKSHOP_INVOKED
+#include <windows.h>
+#include <ver.h>
+#endif
+
+#include "resource.h"
+
+
+
+/*-----------------------------------------------*/
+/* Version Specific Info for this Build		 */
+/*-----------------------------------------------*/
+
+#define VER_COMPANYNAME_STR	"Joe Jaworski\0"
+#define VER_PRODUCTNAME_STR  	"WinTrek\0"
+#define VER_LEGALTRADEMARKS_STR "(c) 1989-92 Joe Jaworski\0"
+#define VER_PRODUCTVERSION_STR  "1.0\0"
+#define VER_PRODUCTVERSION      1,0,0,1
+
+
+#define VER_FILEDESCRIPTION_STR "WinTrek-DLL1\0"
+#define VER_INTERNALNAME_STR    "STDLL1\0"
+#define VER_LEGALCOPYRIGHT_STR  "(c)Copyright 1989-92 Joe Jaworski \0"
+#define VER_FILEVERSION         1,0,0,1
+#define VER_FILEVERSION_STR     "1.00\0"
+#define VER_FILETYPE            VFT_DLL
+#define VER_FILESUBTYPE         VFT2_UNKNOWN
+#define VER_FILEOS           	VOS_DOS_WINDOWS16
+#define VER_FILEFLAGSMASK    	VS_FFI_FILEFLAGSMASK
+#define VER_FILEFLAGS        	0
+
+
+
+/*-----------------------------------------------*/
+/* 		StarFleet Memos Text		 */
+/*-----------------------------------------------*/
+
+
+RD_OPEN RCDATA LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+	"INTERSTELLAR COMM UID#%d\012",
+	"**** SECURITY CODE: 1 ****\012",
+	"TO:  U.S.S. ENTERPRISE\012\012",
+	"%d alien vessels have invaded the galaxy. ",
+	"Our estimates indicate that Federation ",
+	"Headquarters will be attacked on stardate %.1f. ",
+	"This gives you %d Earth days to carry out your mission.\012",
+	"So that you may resupply your ship and make repairs, ",
+	"we have placed %d Starbases in your area.\012\012",
+	"Good Luck, Jim.\0"
+END
+
+
+RD_ENERGY RCDATA LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+	"INTERSTELLAR COMM UID#%d\012",
+	"**** SECURITY CODE: 2 ****\012",
+	"TO:  All Federation Vessels\012\012",
+	"The USS Enterprise has failed in its mission. ",
+	"On stardate %.1f, The Enterprise ran out of Dilithium power, ",
+	"and remains dead in space.\012",
+        "The commander of the Enterprise was obviously too inexperienced ",
+	"for this mission. Dilithium Power Management is one of the most ",
+	"basic Academy training courses.\0"
+END
+
+RD_TIME RCDATA LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+	"INTERSTELLAR COMM UID#%d\012",
+	"**** SECURITY CODE: 3 ****\012",
+	"TO:  U.S.S. ENTERPRISE\012\012",
+	"You have failed to complete your mission in the time alloted. ",
+	"Although you have had some honorable battles, no accomodations can ",
+	"be given at this time.\012",
+        "Report back to federation headquarters immediately so that we may ",
+	"begin hearings on your performance in this mission.\0"
+END
+
+RD_SYS  RCDATA LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+	"INTERSTELLAR COMM UID#%d\012",
+	"**** SECURITY CODE: 2 ****\012",
+	"TO:  All Federation Vessels\012\012",
+	"The USS Enterprise has failed in its mission. ",
+	"On stardate %.1f, The Enterprise was destroyed in battle.\012",
+	"Although its commander had some honorable battles, no ",
+	"accomodations can be given at this time.\0"
+END
+
+
+RD_WIN  RCDATA LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+	"INTERSTELLAR COMM UID#%d\012",
+	"**** SECURITY CODE: 2 ****\012",
+	"TO:  All Federation Vessels\012\012",
+	"The USS Enterprise has sucessfully completed its mission. ",
+	"Exceptional courage and skill has resulted in the ",
+	"quick demise of all alien forces threatening the Federation. ",
+	"The Federation and all its member planets are eternally grateful. "
+	"Highest accommodations to the commander of the "
+	"Enterprise and its crew.\012\012",
+	"Job well done!\0"
+END
+
+
+
+/*-----------------------------------------------*/
+/* 		Icon Definitions		 */
+/*-----------------------------------------------*/
+
+
+ICN_PANEL	ICON pix\panel.ico
+ICN_MSG		ICON pix\msg.ico
+ICN_BTN 	ICON pix\btn.ico
+ICN_SRS		ICON pix\srs.ico
+ICN_LRS 	ICON pix\lrs.ico
+ICN_NAV		ICON pix\nav.ico
+ICN_PHO		ICON pix\pho.ico
+ICN_PHA		ICON pix\pha.ico
+ICN_SHE		ICON pix\she.ico
+ICN_DAM		ICON pix\dam.ico
+ICN_COM		ICON pix\com.ico
+
+
+/*-----------------------------------------------*/
+/* 	      A Zillion Bitmaps			 */
+/*-----------------------------------------------*/
+
+
+BMP_ALERT   BITMAP .\pix\alert.bmp
+BMP_DIGITS  BITMAP .\pix\numeric.bmp
+BMP_PANEL   BITMAP .\pix\stpanel.bmp
+BMP_LINEART BITMAP .\pix\lineart.bmp
+BMP_ABTSHIP BITMAP .\pix\ship.bmp
+BMP_MEMO    BITMAP .\pix\memo.bmp
+BMP_BTNSRS  BITMAP .\pix\btnsrs.bmp
+BMP_BTNLRS  BITMAP .\pix\btnlrs.bmp
+BMP_BTNNAV  BITMAP .\pix\btnnav.bmp
+BMP_BTNSHE  BITMAP .\pix\btnshe.bmp
+BMP_BTNPHO  BITMAP .\pix\btnpho.bmp
+BMP_BTNPHA  BITMAP .\pix\btnpha.bmp
+BMP_BTNDAM  BITMAP .\pix\btndam.bmp
+BMP_BTNCOM  BITMAP .\pix\btncom.bmp
+BMP_ENTL    BITMAP .\pix\entl.bmp
+BMP_ENTR    BITMAP .\pix\entr.bmp
+BMP_BASE    BITMAP .\pix\base.bmp
+BMP_STAR0   BITMAP .\pix\star0.bmp
+BMP_STAR1   BITMAP .\pix\star1.bmp
+BMP_STAR2   BITMAP .\pix\star2.bmp
+BMP_KLINGON BITMAP .\pix\klingon.bmp
+BMP_ROMULAN BITMAP .\pix\romulan.bmp
+BMP_FARENG  BITMAP .\pix\fareng.bmp
+BMP_BORG    BITMAP .\pix\borg.bmp
+BMP_COURSE  BITMAP .\pix\course.bmp
+BMP_WARP    BITMAP .\pix\warp.bmp
+BMP_IMPULSE BITMAP .\pix\impulse.bmp
+BMP_EXECUTE BITMAP .\pix\execute.bmp
+BMP_DIGITSG BITMAP .\pix\numericg.bmp
+BMP_LRBLOCK BITMAP .\pix\lrblock.bmp
+BMP_SHEDIL  BITMAP .\pix\shedil.bmp
+BMP_SHESHE  BITMAP .\pix\sheshe.bmp
+BMP_DAM     BITMAP .\pix\dam.bmp
+BMP_DIST    BITMAP .\pix\distance.bmp
+BMP_PHOTON  BITMAP .\pix\photon.bmp
+BMP_EXPLKLG BITMAP .\pix\explklg.bmp
+BMP_EXPLKLGD BITMAP .\pix\explklgd.bmp
+BMP_EXPLROM BITMAP  .\pix\explrom.bmp
+BMP_EXPLROMD BITMAP .\pix\explromd.bmp
+BMP_EXPLFAR BITMAP  .\pix\explfar.bmp
+BMP_EXPLFARD BITMAP .\pix\explfard.bmp
+BMP_EXPLBRG BITMAP  .\pix\explbrg.bmp
+BMP_EXPLBRGD BITMAP .\pix\explbrgd.bmp
+BMP_EXPLBASD BITMAP .\pix\explbasd.bmp
+BMP_EXPLENTL BITMAP .\pix\explentl.bmp
+BMP_EXPLENTR BITMAP .\pix\explentr.bmp
+BMP_SINGWIDE BITMAP .\pix\singwide.bmp
+BMP_TLOCKBOX BITMAP .\pix\tlockbox.bmp
+BMP_TLOCKON  BITMAP .\pix\tlockon.bmp
+BMP_PHASBOX  BITMAP .\pix\phasbox.bmp
+BMP_CHECKED  BITMAP .\pix\checked.bmp
+BMP_UNCHKED  BITMAP .\pix\unchcked.bmp
+BMP_SCORE    BITMAP .\pix\score.bmp
+BMP_OPENENT  BITMAP .\pix\openent.bmp
+
+
+
+
+/*---------------------------------------------------------------*/
+/*                                                               */
+/* The following section actually creates the version structure. */
+/* It is ignored if we are not being invoked by RC.              */
+/*                                                               */
+/*---------------------------------------------------------------*/
+
+#ifndef WORKSHOP_INVOKED
+
+VS_VERSION_INFO	VERSIONINFO
+FILEVERSION     VER_FILEVERSION
+PRODUCTVERSION  VER_PRODUCTVERSION
+FILEFLAGSMASK   VER_FILEFLAGSMASK
+FILEFLAGS       VER_FILEFLAGS
+FILEOS          VER_FILEOS
+FILETYPE        VER_FILETYPE
+FILESUBTYPE     VER_FILESUBTYPE
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904E4"
+        BEGIN
+            VALUE "CompanyName",     VER_COMPANYNAME_STR
+            VALUE "FileDescription", VER_FILEDESCRIPTION_STR
+            VALUE "FileVersion",     VER_FILEVERSION_STR
+            VALUE "InternalName",    VER_INTERNALNAME_STR
+            VALUE "LegalCopyright",  VER_LEGALCOPYRIGHT_STR
+            VALUE "LegalTrademarks", VER_LEGALTRADEMARKS_STR
+            VALUE "ProductName",     VER_PRODUCTNAME_STR
+            VALUE "ProductVersion",  VER_PRODUCTVERSION_STR
+        END
+        /* additional info should be added here for localized versions */
+    END
+
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+#endif

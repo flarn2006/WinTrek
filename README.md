@@ -1,2 +1,2 @@
 # WinTrek
-Archived source code for Joe Jaworski's WinTrek
+**I DID NOT MAKE THIS.** This game is the work of Joe Jaworski. I simply downloaded the source code from [here](http://web.archive.org/web/20000823035817/http://www.joejaworski.com/wintrek/) and am rehosting it here verbatim. I am not sure what license this source code was released under, but [WinTrek Enhanced](https://sourceforge.net/projects/wintrek/files/WinTrek%20Enhanced/), a modified version, has been available for a long time, and Joe has not to my knowledge given any indication that he objects to it, so I'm assuming he won't have any problem with me reuploading it here.

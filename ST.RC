@@ -1,0 +1,438 @@
+/**************************************************************************
+ *
+ *  (c) 1992 Joe Jaworski
+ *	 18405 Tamarind Street
+ *  Fountain Valley, CA 92708
+ *	 ALL RIGHTS RESERVED.
+ *
+ * Created and Written by Joe Jaworski
+ * Microsoft C 6.00A, SDK 3.1
+ *
+ *
+ * Revision:	$Revision:   1.4  $
+ * Date:	$Date:   20 Feb 1993 09:27:48  $
+ * Log File:	$Logfile:   C:/src/st/vcs/st.rcv  $
+ * Log:		$Log:   C:/src/st/vcs/st.rcv  $
+ * 
+ *    Rev 1.4   20 Feb 1993 09:27:48   jaworski
+ * Initial Revision
+ *
+ **************************************************************************/
+
+/*************************************/
+/*             Star Trek             */
+/*        resource script file       */
+/*************************************/
+
+#include "resource.h"
+
+
+#ifndef WORKSHOP_INVOKED
+
+#define	STRICT
+#include <windows.h>
+
+#ifndef VS_FF_DEBUG
+#include <ver.h>
+#endif
+
+#endif
+
+
+
+
+/*-----------------------------------------------*/
+/* Version Specific Info for this Build		 */
+/*-----------------------------------------------*/
+
+#define VER_COMPANYNAME_STR	"Joe Jaworski\0"
+#define VER_PRODUCTNAME_STR  	"WinTrek\0"
+#define VER_LEGALTRADEMARKS_STR "(c) 1989-96 Joe Jaworski\0"
+#define VER_PRODUCTVERSION_STR  "1.9\0"
+#define VER_PRODUCTVERSION      1,0,0,9
+
+
+#define VER_FILEDESCRIPTION_STR "WinTrek\0"
+#define VER_INTERNALNAME_STR    "ST\0"
+#define VER_LEGALCOPYRIGHT_STR  "(c)Copyright 1989-96 Joe Jaworski \0"
+#define VER_FILEVERSION         1,0,0,9
+#define VER_FILEVERSION_STR     "1.9\0"
+#define VER_FILETYPE            VFT_APP
+#define VER_FILESUBTYPE         VFT2_UNKNOWN
+#define VER_FILEOS           	VOS_DOS_WINDOWS16
+#define VER_FILEFLAGSMASK    	VS_FFI_FILEFLAGSMASK
+#define VER_FILEFLAGS        	0
+
+
+
+ICN_MAIN	ICON pix\main.ico
+
+
+/*-----------------------------------------------*/
+/* 		Main Strings Table		 */
+/*-----------------------------------------------*/
+
+
+STRINGTABLE 
+BEGIN
+  
+	RS_SAVEGAME, "Save Game"
+ 	RS_REDALRTSAVE, "Warning: You cannot save the current game while in a Red Alert Condition. Exit anyway?"
+	RS_SAVEQUERY, "Do you want to save the current game %s?"
+	RS_HSKILL, "Skill"
+	RS_HPLAY, "help"
+	RS_BEGIN, "Choose NEW or OPEN from the File Menu to begin..."
+	RS_AUTOSRS, "AutoSRS"
+	RS_SINGLE, "SingleCtrl"
+	RS_PAUSEI, "IconicPause"
+	RS_GEN,    "General"
+	RS_SOUND,  "Sounds"
+	RS_SRSVAL, "ShortRange"
+	RS_LRSVAL, "LongRange"
+	RS_NAVVAL, "Navigation"
+	RS_PHOVAL, "Photons"
+	RS_PHAVAL, "Phasers"
+	RS_SHEVAL, "Shields"
+	RS_DAMVAL, "Damage"
+	RS_COMVAL, "Computer"
+	RS_PANVAL, "Status"
+	RS_BTNVAL, "Controls"
+	RS_MSGVAL, "Messages"
+	RS_POS,	   "Positions"
+	RS_BTN,	   "BUTTON"
+	RS_NODAM,  "-OK-"
+	RS_EXTCLASS, "STEXT"
+	RS_ABOUT,  "WINTREK Version 1.9\nby Joe Jaworski\nIn memory of Gene Roddenberry"
+	RS_OPENFAIL, "Errors trying to read the game file %s"
+	RS_OPENFAIL2,"%s is not a WINTREK game file."
+	RS_LOADGAME  "Load Game"
+	RS_WRITEFAIL, "Errors trying to write the game file %s"
+END
+
+
+/*-----------------------------------------------*/
+/* 	   Message Window Strings Table	 	 */
+/*-----------------------------------------------*/
+
+
+STRINGTABLE 
+BEGIN
+	MG_IENGAGE, "Impulse Engines Engaged..."
+	MG_WENGAGE, "Warp Engines Engaged..."
+	MG_STOPPED, "All Stop at Sector %d,%d"
+	MG_BLOCKST, "Blocked by Star at %d,%d"
+	MG_BLOCKSB, "Blocked by StarBase at %d,%d"
+	MG_BLOCKKL, "Blocked by Klingon Ship at %d,%d"
+	MG_BLOCKFA, "Blocked by Farengi Ship at %d,%d"
+	MG_BLOCKRO, "Blocked by Romulan Ship at %d,%d"
+	MG_BLOCKBO, "Blocked by Borg Ship at %d,%d"
+	MG_DOCKED,  "Enterprise is docked, Sir."
+	MG_PHOFIRE, "Firing Photon Torpedo..."
+	MG_PHOSTAR, "Torpedo consumed by Star at %d,%d"
+	MG_PHOSHIP, "Torpedo hit at %d,%d  %d Units"
+	MG_PHOBASE, "real smart move, Captain."
+	MG_PHOLOST, "Torpedo lost in space."
+	MG_PHOEMPTY,"All Photon Tubes empty, Captain."
+	MG_PHODEST, "Alien Destroyed."
+	MG_FATAL,   "Internal Error: %s%d"
+	MG_PHAFIRE, "Firing Phasers..."
+	MG_PHAHIT,  "Direct hit at %d,%d  %d Units"
+	MG_PHANONE, "No target hit."
+	MG_ENTHIT,  "%d Units hit Enterprise"
+	MG_SHEHOLD, "Shields power reduced %u%%"
+	MG_SHEDOWN, "Shields are down, Captain."
+
+	MG_ONSRS,   "Short Range Sensors repaired."	
+	MG_ONLRS,   "Long Range Sensors repaired."	
+	MG_ONNAV,   "Warp Drive back on line."	
+	MG_ONSHE,   "Shields repaired."	
+	MG_ONPHO,   "Torpedo Control restored."	
+	MG_ONPHA,   "Phaser Banks repaired."	
+	MG_ONCOM,   "Computer repaired."	
+	MG_ONDAM,   "Damage Report Systems repaired."	
+	MG_ONPAN,   "Bridge Status Panel repaired."	
+	MG_ONMSG,   "Message Display back on line."	
+	MG_INIMSG1, "MDS Diagnostics v734.3"
+	MG_INIMSG2, "Ready"
+	MG_YELLOW,  "Warning- Condition Yellow."
+	MG_GREEN,   "Condition Green, Sir."
+	MG_RED,     "Sounding Red Alert."
+	MG_RESUME,  "Resuming Saved Game."
+	MG_SAVED,   "Game Successfully Saved."
+	MG_STARHIT, "Star at %d,%d consumes %d Units"
+	MG_ALMISS,  "Alien missed"
+	MG_SHEHLD2, "Shields still holding."
+
+	DM_MINOR,   "No damage reported"
+	DM_MINOR+1, "Minor damage to Aft Cargo Bay"
+	DM_MINOR+2, "Minor damage to Engineering Section"
+	DM_MINOR+3, "Minor damage to Computer Core"
+	DM_MINOR+4, "Minor damage to Transporter 3"
+	DM_MINOR+5, "Hull breach in Shuttle Bay 2"
+	DM_MINOR+6, "Structural damage to 2nd level Decks"
+	DM_MINOR+7, "Minor hit on Computer Control"
+	DM_MINOR+8, "Minor hit on Phaser Banks"
+	DM_MINOR+9, "Minor hit on Photon Control"
+	DM_MINOR+10,"Minor hit on Shield Control"
+	DM_MINOR+11,"Minor damage to Deck 4"
+	DM_MINOR+12,"Minor damage to Science Lab"
+	DM_MINOR+13,"Minor damage to Navigation"
+	DM_MINOR+14,"Minor damage to Dilithium Chamber"
+	DM_MINOR+15,"Minor hit on Short Range Sensors"
+	DM_MINOR+16,"Minor hit on Long Range Sensors"
+	DM_MINOR+17,"Minor hit on Bridge Control"
+	DM_MINOR+18,"Radiation leak on Deck 17"
+	DM_MINOR+19,"Fire reported in Access Port 12"
+	DM_MINOR+20,"Minor damage to TurboLift 4"
+	DM_MINOR+21,"Minor damage to Medical Section"
+	DM_MINOR+22,"Secondary Hull damaged on Decks 12-23"
+
+
+	DM_MAJNAV,  "Warp Drive Seriously Damaged"
+	DM_MAJSRS,  "Major Damage to Short Range Sensors"
+	DM_MAJLRS,  "Major Damage to Long Range Sensors"
+	DM_MAJSHE,  "Shield Control Is Not Responding"
+	DM_MAJPHA,  "Phasers Are Now Inoperative"
+	DM_MAJPHO,  "Photon Torpedo Control is gone"
+	DM_MAJCOM,  "Major Damage to Central Computer"
+	DM_MAJDAM,  "Damage Report Systems are down"
+	DM_MAJPAN,  "Bridge Status Panel down"
+	DM_MAJMSG,  "Bridge Message Display is down"
+
+	DM_ADDNAV,  "Another direct hit on Warp Engines"
+	DM_ADDSRS,  "More damage to Short Range Sensors"
+	DM_ADDLRS,  "More damage to Long Range Sensors"
+	DM_ADDSHE,  "Additional damage to Shields"
+	DM_ADDPHA,  "More damage to Phasers"
+	DM_ADDPHO,  "Additional Photon Tube damage"
+	DM_ADDCOM,  "Direct hit on Central Computer"
+	DM_ADDDAM,  "Damage report systems hit again"
+	DM_ADDPAN,  "More damage to Bridge Status Panel"
+	DM_ADDMSG,  "More damage to Message Display System"
+
+	DM_KILNAV,  "Warp Engines have been destroyed"
+	DM_KILSRS,  "Short Range Sensors destroyed"
+	DM_KILLRS,  "Long Range Sensors beyond repair"
+	DM_KILSHE,  "Shields now beyond repair"
+	DM_KILPHA,  "Phaser Banks have been destroyed"
+	DM_KILPHO,  "Photon Tubes damaged beyond repair"
+	DM_KILCOM,  "Central Computer Core is destroyed"
+	DM_KILDAM,  "Damage Report Systems destroyed"
+	DM_KILPAN,  "Bridge Status Panel circuits destroyed"
+	DM_KILMSG,  "Message Display System destroyed"
+
+  
+END
+
+/*-----------------------------------------------*/
+/* 	   Computer Window Strings Table	 */
+/*-----------------------------------------------*/
+
+
+STRINGTABLE 
+BEGIN
+	COM_INIT,    "BridgeNet Ver1021.047\nNeural %d connected\n\n>"
+	COM_CURRLOC, "\nQuadrant %d,%d  Sector %d,%d\n>"
+	COM_INVALID, "huh?\n>"
+	COM_MANUAL,  "\nSee 'COMPUTER COMMAND SUMMARY' in\nthe WinTrek manual for a complete\nlist of commands.\n>"
+	COM_STARDATE "\n  Stardate Now: % -4.1f\nMission Length: % -4.1f\n  End Stardate: % -4.1f\n     Time Used: % -4.1f\n     Time Left: % -4.1f\n>"
+	COM_POWER,   "\n  Dilithium: %d\n    Shields: %d\nTotal Power: %d\n>"	
+	COM_ALIEN,   "\nTotal Aliens: %d\n   Destroyed: %d\n        Left: %d\n>"	
+	COM_NORIC,   "Scanning...\nNo qualifying stars in Quadrant\n>"
+	COM_NORIC2,  "Scanning...\nNo stars in Quadrant\n>"
+	COM_COMRIC,  "Scanning...\nComputing ricochet coordinates...\n"
+	COM_BASELOC, "Starbase found at Quadrant %d,%d\n"
+	COM_BASEERR, "Starbase possible at Quadrant %d,%d\n"
+	COM_BASEDIR, "- Warp %d, %d Degrees\n"
+	COM_SCAN1,   "Scanning Sector...\n\n"
+	COM_SCANBAS, "StarBase found at %d,%d\n"
+	COM_SCANSTR, "Class %c Star at %d,%d\n"
+	COM_SCANKLI, "Klingon at %d,%d  %d energy level\n"
+	COM_SCANROM, "Romulan at %d,%d  %d energy level\n"
+	COM_SCANBRG, "Borg at %d,%d  %d energy level\n"
+	COM_SCANFRG, "Farengi at %d,%d  %d energy level\n"
+	COM_PHODATA, "%d Degrees, Distance: %d\n\n"
+	COM_RICCOUNT,"[%d]\n"
+	COM_SCANSTR2," -Gravity Ricochet Compatible\n"
+	COM_XYERR,   "Invalid X or Y coordinates.\n>"
+	COM_SECTDIR, "- Impulse %d, %d Degrees\n"
+	COM_REROUTE, "Rerouting Message Panel to Computer\n>"
+	COM_UNROUTE, "Enabling normal Message Panel\n>"
+	COM_MSGRER,  "*** All Messages rerouted to Computer ***"
+	COM_MSGUNR,  "Message Panel Enabled"
+	COM_SRSBUSY, "System Busy- Try again later."
+	COM_DAMMSG,  "Message Display:     %s\n"
+	COM_DAMPAN,  "Status Panel:        %s\n"
+	COM_DAMSRS,  "Short Range Sensors: %s\n"
+	COM_DAMLRS,  "Long Range Sensors:  %s\n"
+	COM_DAMNAV,  "Warp Drive:          %s\n"
+	COM_DAMSHE,  "Shield Control:      %s\n"
+	COM_DAMPHA,  "Phaser Banks:        %s\n"
+	COM_DAMPHO,  "Photon Banks:        %s\n"
+	COM_DAMDAM,  "Damage Control:      %s\n>"
+	COM_BADADV,  "Invalid time entry.\n>"
+	COM_DOSCMD,  "Get Serious.\n>"
+	COM_ANAHEAD, "Time per Alien Analysis:\n"
+	COM_ANAGAM,  "Mission Requirement: %1.2f\n"
+	COM_ANANOW1, "     Current rating: %1.2f\n"
+	COM_ANANOW2, "     Current rating: n/a\n"
+	COM_ANAREQ,  "    Required to win: %1.2f\n"
+	COM_ANAANA1, "You're doing very well.\n>"
+	COM_ANAANA2, "You're falling behind.\n>"
+
+END
+
+
+
+
+
+
+/*-----------------------------------------------*/
+/* 	      	  The Menus			 */
+/*-----------------------------------------------*/
+
+
+
+MNU_EMPTY MENU 
+BEGIN
+	POPUP "&File"
+	BEGIN
+		MENUITEM "&New\tCtrl+N", IDM_NEW
+		MENUITEM "&Open...\tCtrl+O", IDM_OPEN
+		MENUITEM "&Save\tCtrl+S", IDM_SAVE, GRAYED
+		MENUITEM "S&ave As...", IDM_SAVEAS, GRAYED
+		MENUITEM "End &Game", IDM_ENDGAME, GRAYED
+		MENUITEM SEPARATOR
+		MENUITEM "E&xit", IDM_EXIT
+	END
+
+	POPUP "&Skill"
+	BEGIN
+		MENUITEM "&Admiral", IDM_ADMIRAL
+		MENUITEM "&Captain", IDM_CAPTAIN
+		MENUITEM "&First Officer", IDM_1OFFICER
+		MENUITEM "&Officer", IDM_OFFICER
+		MENUITEM "&Yeoman", IDM_YEOMAN
+		MENUITEM "&Expendable Crewman", IDM_CREWMAN
+	END
+
+	POPUP "&Help"
+	BEGIN
+		MENUITEM "Player's Manual", IDM_HELP
+		MENUITEM SEPARATOR
+		MENUITEM "&About WinTrek...", IDM_ABOUT
+	END
+
+END
+
+
+MNU_FULL MENU 
+BEGIN
+	POPUP "&File"
+	BEGIN
+		MENUITEM "&New\tCtrl+N", IDM_NEW
+		MENUITEM "&Open...\tCtrl+O", IDM_OPEN
+		MENUITEM "&Save\tCtrl+S", IDM_SAVE
+		MENUITEM "S&ave As...", IDM_SAVEAS
+		MENUITEM "End &Game", IDM_ENDGAME
+		MENUITEM SEPARATOR
+		MENUITEM "E&xit", IDM_EXIT
+	END
+
+	POPUP "&Options"
+	BEGIN
+		MENUITEM "&Pause Game\tPAUSE", IDM_PAUSE
+		MENUITEM SEPARATOR
+		MENUITEM "&Auto Activate SRS", IDM_AUTOSRS
+		MENUITEM "Single &Control Window", IDM_SINGLE
+		MENUITEM "Pause when &Iconic", IDM_PICONIC
+		MENUITEM "&Sounds", IDM_SOUNDS
+	END
+
+	POPUP "&Window"
+	BEGIN
+		MENUITEM "&Cascade\tShift+F5", IDM_CASCADE
+		MENUITEM "&Tile\tShift+F4", IDM_TILE
+		MENUITEM "&Arrange Icons", IDM_ARRANGE
+		MENUITEM "&Default Positions", IDM_DEFPOS
+		MENUITEM "&Save Window Positions", IDM_SAVEDEF
+		MENUITEM "&Restore Window Positions", IDM_RESDEF
+	END
+
+	POPUP "&Help"
+	BEGIN
+		MENUITEM "Player's Manual", IDM_HELP
+		MENUITEM SEPARATOR
+		MENUITEM "&About WinTrek...", IDM_ABOUT
+	END
+
+END
+
+
+MNU_FULL ACCELERATORS 
+BEGIN
+	"N", IDM_NEW, VIRTKEY, CONTROL
+	"O", IDM_OPEN, VIRTKEY, CONTROL
+	"S", IDM_SAVE, VIRTKEY, CONTROL
+	VK_PAUSE, IDM_PAUSE, VIRTKEY
+	VK_F5, IDM_CASCADE, VIRTKEY, SHIFT
+	VK_F4, IDM_TILE, VIRTKEY, SHIFT
+END
+
+
+
+/*---------------------------------------------------------------*/
+/*                                                               */
+/* The following section actually creates the version structure. */
+/* It is ignored if we are not being invoked by RC.              */
+/*                                                               */
+/*---------------------------------------------------------------*/
+
+#ifndef WORKSHOP_INVOKED
+
+VS_VERSION_INFO	VERSIONINFO
+FILEVERSION     VER_FILEVERSION
+PRODUCTVERSION  VER_PRODUCTVERSION
+FILEFLAGSMASK   VER_FILEFLAGSMASK
+FILEFLAGS       VER_FILEFLAGS
+FILEOS          VER_FILEOS
+FILETYPE        VER_FILETYPE
+FILESUBTYPE     VER_FILESUBTYPE
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904E4"
+        BEGIN
+            VALUE "CompanyName",     VER_COMPANYNAME_STR
+            VALUE "FileDescription", VER_FILEDESCRIPTION_STR
+            VALUE "FileVersion",     VER_FILEVERSION_STR
+            VALUE "InternalName",    VER_INTERNALNAME_STR
+            VALUE "LegalCopyright",  VER_LEGALCOPYRIGHT_STR
+            VALUE "LegalTrademarks", VER_LEGALTRADEMARKS_STR
+            VALUE "ProductName",     VER_PRODUCTNAME_STR
+            VALUE "ProductVersion",  VER_PRODUCTVERSION_STR
+        END
+        /* additional info should be added here for localized versions */
+    END
+
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+
+    END
+END
+#endif
+
+
+DLG_SCORE DIALOG 100, 72, 137, 92
+CAPTION "WinTrek"
+FONT 8, "Helv"
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+BEGIN
+	CONTROL "Congradulations!", -1, "STATIC", SS_LEFTNOWORDWRAP | WS_GROUP, 37, 11, 66, 10
+	CONTROL "A new High Score!", -1, "STATIC", SS_LEFTNOWORDWRAP | WS_GROUP, 37, 22, 85, 10
+	CONTROL "", 100, "EDIT", ES_UPPERCASE | ES_LEFT | WS_BORDER | WS_TABSTOP, 38, 45, 79, 12
+	CONTROL "Name:", -1, "STATIC", SS_LEFT | WS_GROUP, 13, 46, 20, 8
+	CONTROL "OK", IDOK, "BUTTON", BS_DEFPUSHBUTTON | WS_TABSTOP, 52, 67, 29, 16
+	CONTROL ICN_MAIN, -1, "static", SS_ICON, 10, 11, 22, 22
+END

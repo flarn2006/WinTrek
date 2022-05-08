@@ -1,0 +1,26 @@
+;**************************************************************************
+;*  (c) 1992 Joe Jaworski
+;*	18405 Tamarind Street
+;*  	Fountain Valley, CA 92708
+;*	ALL RIGHTS RESERVED.
+;*
+;* File:       $Workfile:   stdll2.def  $
+;* Revision:   $Revision:   1.4  $
+;* Date:       $Date:   20 Feb 1993 09:27:52  $
+;* Log File:   $Logfile:   C:/src/st/vcs/stdll2.dev  $
+;* Log:        $Log:   C:/src/st/vcs/stdll2.dev  $
+;* 
+;*    Rev 1.4   20 Feb 1993 09:27:52   jaworski
+;* Initial Revision
+;**************************************************************************
+LIBRARY     STDLL2
+EXETYPE     WINDOWS
+STUB        'WINSTUB.EXE'
+DESCRIPTION 'WINTREK2.DLL support objects (c)1992 Joe Jaworski'
+CODE        PRELOAD FIXED
+DATA        PRELOAD MOVEABLE SINGLE
+HEAPSIZE    0
+
+
+EXPORTS
+            WEP @1  RESIDENTNAME

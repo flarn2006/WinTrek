@@ -1,0 +1,50 @@
+;**************************************************************************
+;*  (c) 1992 Joe Jaworski
+;*	18405 Tamarind Street
+;*  	Fountain Valley, CA 92708
+;*	ALL RIGHTS RESERVED.
+;*
+;* File:       $Workfile:   st.def  $
+;* Revision:   $Revision:   1.4  $
+;* Date:       $Date:   20 Feb 1993 09:27:52  $
+;* Log File:   $Logfile:   C:/src/st/vcs/st.dev  $
+;* Log:        $Log:   C:/src/st/vcs/st.dev  $
+;* 
+;*    Rev 1.4   20 Feb 1993 09:27:52   jaworski
+;* Initial Revision
+;**************************************************************************
+
+NAME            ST
+DESCRIPTION     'Star Trek Classic Version 1.00 (c)1991 Joe Jaworski'
+EXETYPE		WINDOWS
+STUB 		'WINSTUB.EXE'
+
+SEGMENTS
+        _ST      PRELOAD    MOVEABLE
+	_UTILS	 PRELOAD    MOVEABLE
+	_INIT	 PRELOAD    MOVEABLE DISCARDABLE
+	_LOADSAVE PRELOAD   MOVEABLE DISCARDABLE
+        _PANEL   LOADONCALL MOVEABLE
+	_BTN	 LOADONCALL MOVEABLE DISCARDABLE
+        _MSG	 LOADONCALL MOVEABLE
+	_SRS	 LOADONCALL MOVEABLE
+	_LRS	 LOADONCALL MOVEABLE DISCARDABLE
+	_NAV	 LOADONCALL MOVEABLE DISCARDABLE
+	_PHO	 LOADONCALL MOVEABLE DISCARDABLE
+	_PHA	 LOADONCALL MOVEABLE DISCARDABLE
+	_SHE	 LOADONCALL MOVEABLE DISCARDABLE
+	_DAM	 LOADONCALL MOVEABLE DISCARDABLE
+	_COM	 LOADONCALL MOVEABLE DISCARDABLE
+	_SOUND	 LOADONCALL MOVEABLE DISCARDABLE
+	_OPEN	 LOADONCALL MOVEABLE DISCARDABLE
+	
+
+CODE		PRELOAD MOVEABLE
+DATA		PRELOAD MOVEABLE MULTIPLE
+
+HEAPSIZE	4096
+STACKSIZE	8192
+
+
+IMPORTS
+	kernel.wsprintf
